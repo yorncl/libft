@@ -6,13 +6,13 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 12:09:47 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/08 13:32:44 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:55:53 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_bzero(void *s, unsigned int n)
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }

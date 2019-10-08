@@ -6,13 +6,13 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 14:12:05 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/08 14:32:30 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/08 15:55:44 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	*ft_memccpy(void *dst, const void *src, int c, unsigned int n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	char *dest;
 	char *source;
