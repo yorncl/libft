@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 14:12:05 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/08 17:17:37 by mclaudel         ###   ########.fr       */
+/*   Created: 2019/10/08 16:59:47 by mclaudel          #+#    #+#             */
+/*   Updated: 2019/10/08 17:17:59 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *dest;
-	unsigned char *source;
+	unsigned char *str;
 
-	dest = dst;
-	source = (unsigned char*)src;
+	str = (unsigned char*)s;
 	while (n-- > 0)
-	{
-		*dest = *source;
-		if (*source == c)
-			return (dest + 1);
-		dest++;
-		source++;
-	}
+		if (*str == c)
+			return (str);
+		else
+			str++;
 	return (0);
 }

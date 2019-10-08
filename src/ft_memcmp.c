@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/08 14:12:05 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/08 17:17:37 by mclaudel         ###   ########.fr       */
+/*   Created: 2019/10/08 17:22:57 by mclaudel          #+#    #+#             */
+/*   Updated: 2019/10/08 17:40:32 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *dest;
-	unsigned char *source;
+	unsigned char *str1;
+	unsigned char *str2;
 
-	dest = dst;
-	source = (unsigned char*)src;
+	str1 = (unsigned char*)s1;
+	str2 = (unsigned char*)s2;
 	while (n-- > 0)
-	{
-		*dest = *source;
-		if (*source == c)
-			return (dest + 1);
-		dest++;
-		source++;
-	}
+		if (*str1 != *str2)
+			return (*str1 - *str2);
+		else
+		{
+			str1++;
+			str2++;
+		}
 	return (0);
 }
