@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 15:21:20 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/09 13:47:37 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/09 18:10:25 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,5 @@ int	ft_atoi(char *str)
 		value += 48 - *str;
 		str++;
 	}
-	if (isneg)
-		return (value);
-	else
-		return (-value);
+	return (isneg ? value : -value);
 }
