@@ -6,11 +6,13 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 18:18:14 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/08 18:26:39 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/09 13:47:59 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_isascii(int c)
+#include <libft.h>
+
+int		ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

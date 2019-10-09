@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:06:26 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/09 12:20:18 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/09 13:36:18 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,8 @@ int     ft_isprint(int c);
 int     ft_toupper(int c);
 int     ft_tolower(int c);
 char 	*ft_strchr(const char *s, int c);
+char 	*ft_strrchr(const char *s, int c);
+int		ft_strncmp(char *s1, char *s2, size_t n);
+size_t     strlcpy(char *dst, const char *src, size_t dstsize);
+size_t     strlcat(char *dst, const char *src, size_t dstsize);
 #endif

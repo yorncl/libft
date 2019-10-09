@@ -6,9 +6,11 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 11:27:20 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/09 11:38:32 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/09 13:48:24 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 int		ft_isprint(int c)
 {

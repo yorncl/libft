@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 12:20:19 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/09 13:49:25 by mclaudel         ###   ########.fr       */
+/*   Created: 2019/10/09 12:35:30 by mclaudel          #+#    #+#             */
+/*   Updated: 2019/10/09 13:49:52 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char *str;
+	char *last;
 
 	str = (char*)s;
+	last = 0;
 	while (*str)
+	{
 		if (c == *str)
-			return (str);
-		else
-			str++;
-	return (c == '\0' ? str : 0);
+			last = str;
+		str++;
+	}
+	return (c == '\0' ? str : last);
 }

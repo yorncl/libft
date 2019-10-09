@@ -16,13 +16,14 @@ libft : all
 all : ${OBJS}
 	ar rcs ${LIB} ${OBJS}
 
-
-test : all
-	${CC} ${SRCS_TEST} ${LIB} -o ${BIN_TEST}
-	./run_test
+re : fclean all
 
 clean :
 	rm -f ${OBJS}
 
 fclean : clean
 	rm -f ${LIB} ${BIN_TEST}
+
+test : all
+	${CC} ${SRCS_TEST} ${LIB} -o ${BIN_TEST}
+	./run_test

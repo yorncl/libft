@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 12:20:19 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/09 13:49:25 by mclaudel         ###   ########.fr       */
+/*   Created: 2019/10/09 13:56:23 by mclaudel          #+#    #+#             */
+/*   Updated: 2019/10/09 13:58:58 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strchr(const char *s, int c)
+size_t	strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	char *str;
+	int			i;
+	size_t		src_len;
 
-	str = (char*)s;
-	while (*str)
-		if (c == *str)
-			return (str);
-		else
-			str++;
-	return (c == '\0' ? str : 0);
+	src_len = ft_lenght(src);
+	if (dstsize > 0)
+	{
+		i = 0;
+		if (dstsize > src_len)
+		{
+			while (src[i++])
+				dst[i] = src[i];
+		}
+		if (dstsize < src_len)
+			while (i < dstsize - 1)
+			{
+				dst[i] = src[i];
+				i++;
+			}
+		dst[i] = '\0';
+	}
+	return (0);
 }
