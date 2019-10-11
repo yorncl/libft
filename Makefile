@@ -8,13 +8,19 @@ SRCS_TEST = test/libft_test.c
 BIN_TEST = run_test
 
 
-LIB = lib/libft.a
+LIB = libft.a
 
+NAME = libft
+
+LINK = ar rcs
 
 libft : all
 
-all : ${OBJS}
-	ar rcs ${LIB} ${OBJS}
+all : ${NAME}
+
+${NAME} : ${OBJS} headers/libft.h
+	${CC} ${CFLAGS} -c ${SRCS}
+	${LINK} ${LIB} ${OBJS}
 
 re : fclean all
 

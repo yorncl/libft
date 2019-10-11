@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 12:02:11 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/10 12:23:54 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/11 09:56:07 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int		incharset(char c, char *set)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s1, char const *set)
+char			*ft_strtrim(char const *s1, char const *set)
 {
 	int		start;
 	int		end;
