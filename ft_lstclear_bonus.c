@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 11:57:32 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/11 18:46:13 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/12 16:25:55 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list *ptr;
 	t_list *previous;
 
+	if (!lst || !*lst || !del)
+		return ;
 	ptr = *lst;
 	while (ptr)
 	{
@@ -24,6 +26,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		ptr = ptr->next;
 		ft_lstdelone(previous, del);
 	}
-	ptr = (*lst)->next;
 	*lst = 0;
 }
