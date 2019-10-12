@@ -19,7 +19,7 @@ NAME = libft.a
 
 all : ${NAME}
 
-${NAME} :  ${OBJS}
+$(NAME) :  ${OBJS}
 	ar rcs ${LIB} ${OBJS}
 
 bonus : ${OBJS_B} ${OBJS}

@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 15:21:20 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/11 14:25:32 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/12 18:46:39 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ int	ft_atoi(char *str)
 	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v'
 		|| *str == '\f' || *str == '\r')
 		str++;
-	if (*str == '-')
+	if (*str == '-' || *str == '+')
 	{
-		isneg = 1;
+		isneg = (*str == '-' ? 1 : 0);
 		str++;
 	}
 	while (*str >= '0' && *str <= '9')

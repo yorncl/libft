@@ -6,13 +6,13 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 13:37:12 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/11 14:25:31 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/12 17:19:32 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t			destlen;
 	unsigned int	i;
