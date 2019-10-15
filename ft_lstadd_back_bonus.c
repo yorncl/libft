@@ -6,13 +6,11 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/11 11:44:19 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/12 18:06:52 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/15 15:08:24 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include <stdio.h>
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
