@@ -6,13 +6,13 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 15:21:20 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/12 18:46:39 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/15 17:40:04 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int value;
 	int isneg;

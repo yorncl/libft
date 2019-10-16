@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 15:05:08 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/11 15:35:38 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/16 13:41:28 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*str;
 	unsigned int	i;
 
+	if (!f || !s)
+		return (0);
 	if (!(str = ft_strdup(s)))
 		return (0);
 	i = -1;

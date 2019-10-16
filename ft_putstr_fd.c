@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 15:24:47 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/11 14:25:31 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/16 14:11:21 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
-		ft_putchar_fd(*s++, fd);
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
 }

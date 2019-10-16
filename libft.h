@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:06:26 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/12 16:12:59 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/15 17:39:55 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
-int				ft_atoi(char *str);
+int				ft_atoi(const char *str);
 int				ft_isprint(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);

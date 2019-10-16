@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 12:02:11 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/11 18:35:02 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/16 16:10:15 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,14 @@ char			*ft_strtrim(char const *s1, char const *set)
 	int		end;
 	char	*trimmed;
 
-	(void)set;
-	if (!s1)
+	if (!s1 || !set)
 		return (0);
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	while (incharset(s1[start], (char *)set))
 		start++;
 	if (!s1[start])
-		return ("");
+		return (ft_calloc(1, 1));
 	while (incharset(s1[end], (char *)set))
 		end--;
 	return ((trimmed = ft_substr(s1, start, end - start + 1)) ? trimmed : 0);

@@ -35,5 +35,5 @@ fclean : clean
 	rm -f ${LIB} ${BIN_TEST}
 
 test : bonus
-	${CC} ${SRCS_TEST} ${LIB} -o ${BIN_TEST}
+	${CC} ${CFLAGS} -fsanitize=address -g3 ${SRCS_TEST} ${LIB} -o ${BIN_TEST}
 	./run_test

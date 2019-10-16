@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 11:47:19 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/11 14:25:31 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/16 12:56:18 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char *str;
 	char *ptr;
 
-	if (!(str = ft_calloc(1, ft_strlen(s1) + ft_strlen(s2) + 1)))
+	if (!s1 || !s2 || !(str = ft_calloc(1, ft_strlen(s1) + ft_strlen(s2) + 1)))
 		return (0);
 	ptr = str;
 	while (*s1)
