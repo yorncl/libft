@@ -6,19 +6,19 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 12:28:17 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/15 11:43:35 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/17 11:18:11 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int		nbstring(char *s, char c)
+static	int		nbstring(const char *s, char c)
 {
 	int		nb;
 	char	*ptr;
 
 	nb = 0;
-	ptr = s;
+	ptr = (char*)s;
 	while (*ptr)
 	{
 		while (*ptr && *ptr == c)
@@ -49,9 +49,9 @@ char			**ft_split(char const *s, char c)
 	char	**strs;
 	char	**k;
 
-	ptr = (char*)s;
-	if (!(strs = ft_calloc(nbstring(ptr, c) + 1, sizeof(char*))))
+	if (!s || !(strs = ft_calloc(nbstring(s, c) + 1, sizeof(char*))))
 		return (0);
+	ptr = (char*)s;
 	k = strs;
 	while (*ptr)
 	{
