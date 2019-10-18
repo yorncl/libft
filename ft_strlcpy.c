@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 13:56:23 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/18 14:47:06 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/18 17:08:16 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		dst[i] = src[i];
 		i++;
 	}
-	if (dstsize > 0)
-		dst[i] = '\0';
+	dst[i] = '\0';
 	return (ft_strlen(src));
 }
