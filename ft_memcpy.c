@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 13:51:25 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/18 16:01:17 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/19 14:25:22 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char	*dest;
 	char	*source;
 
-	if (!dst && !src)
+	if (!dst || !src)
 		return (0);
 	dest = (char*)dst;
 	source = (char*)src;

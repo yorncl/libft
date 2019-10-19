@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 12:28:17 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/17 11:18:11 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/19 12:54:41 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static	void	*freebuffs(char **buff)
 
 	tmp = buff;
 	while (*tmp)
-		free(tmp++);
+		free(*tmp++);
 	free(buff);
 	return (0);
 }
