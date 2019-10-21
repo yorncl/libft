@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:35:30 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/18 17:03:06 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/21 10:32:12 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,9 @@ char	*ft_strrchr(const char *s, int c)
 			last = str;
 		str++;
 	}
-	return (c == '\0' ? str : last);
+	if (c == '\0')
+		return (str);
+	if (last)
+		return (last);
+	return (0);
 }
