@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 12:20:19 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/21 10:30:38 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/22 14:58:46 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@ char	*ft_strchr(const char *s, int c)
 	char *str;
 
 	str = (char*)s;
-	while (*str)
-		if (c == *str)
-			return (str);
-		else
-			str++;
-	return (c == '\0' ? str : 0);
+	while (*str != c)
+	{
+		if (*str == '\0')
+			return (0);
+		str++;
+	}
+	return (str);
 }

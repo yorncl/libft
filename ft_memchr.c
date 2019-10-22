@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 16:59:47 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/21 10:24:29 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/22 14:49:06 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	str = (unsigned char*)s;
 	while (n-- > 0)
+	{
 		if (*str == (unsigned char)c)
 			return (str);
-		else
-			str++;
+		str++;
+	}
 	return (0);
 }
