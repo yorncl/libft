@@ -6,20 +6,36 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 18:28:10 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/10/22 15:00:48 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/10/24 00:02:45 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+static void		*ft_memcpy_bis(void *dst, const void *src, size_t n)
 {
-	size_t	len;
-	char	*ptr;
+	unsigned char	*destination;
+	unsigned char	*source;
 
-	len = ft_strlen(s1);
-	if (!(ptr = ft_calloc(1, (len + 1) * sizeof(char))))
+	destination = (unsigned char *)dst;
+	source = (unsigned char *)src;
+	if (dst == NULL || src == NULL)
+		return (NULL);
+	if (n == 0 || dst == src)
+		return (dst);
+	while (n--)
+		*destination++ = *source++;
+	*destination = '\0';
+	return (dst);
+}
+
+char			*ft_strdup(const char *s1)
+{
+	char	*cpy;
+	int		i;
+
+	i = 0;
+	if (!(cpy = malloc(sizeof(char) * (ft_strlen(s1) + 1))))
 		return (0);
-	ft_strlcpy(ptr, s1, len + 1);
-	return (ptr);
+	return (ft_memcpy_bis(cpy, s1, ft_strlen(s1)));
 }
