@@ -6,11 +6,11 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/12 10:35:55 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/11/12 10:36:29 by mclaudel         ###   ########.fr       */
+/*   Updated: 2019/11/12 10:42:41 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_intlen(int n)
+int	ft_intlen(int n)
 {
 	int size;
 
