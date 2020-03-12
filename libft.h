@@ -6,7 +6,7 @@
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 14:06:26 by mclaudel          #+#    #+#             */
-/*   Updated: 2019/11/14 18:53:33 by mclaudel         ###   ########.fr       */
+/*   Updated: 2020/03/12 16:07:34 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@ typedef struct	s_list
 	void			*content;
 	struct s_list	*next;
 }				t_list;
+
+typedef struct	s_dict
+{
+	char			*key;
+	char			*value;
+	struct s_dict	*next;
+}				t_dict;
 
 void			*ft_memset(void *b, int c, size_t len);
 void			ft_bzero(void *s, size_t n);
@@ -73,4 +80,10 @@ void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
+
+t_dict			*ft_dictnew(char *key, char *value);
+void			ft_dictadd(t_dict **dict, t_dict *new);
+char			*ft_dictget(t_dict *dict, char *key);
+void			ft_dictclear(t_dict *dict);
+
 #endif
