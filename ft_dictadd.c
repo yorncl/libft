@@ -16,8 +16,13 @@ void	ft_dictadd(t_dict **dict, t_dict *new)
 {
 	t_dict	*p;
 
-	if (!*dict || new == 0)
+	if (!dict || new == 0)
 		return ;
+	if (!*dict)
+	{
+		*dict = new;
+		return ;
+	}
 	p = *dict;
 	while (p->next)
 		p = p->next;
