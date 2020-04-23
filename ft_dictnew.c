@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-t_dict			*ft_dictnew(char *key, char *value)
+t_dict			*ft_dictnew(char *key, void *value)
 {
 	t_dict *new;
 

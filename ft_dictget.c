@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char			*ft_dictget(t_dict *dict, char *key)
+void			*ft_dictget(t_dict *dict, char *key)
 {
 	size_t len;
 

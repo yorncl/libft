@@ -25,7 +25,7 @@ typedef struct	s_list
 typedef struct	s_dict
 {
 	char			*key;
-	char			*value;
+	void			*value;
 	struct s_dict	*next;
 }				t_dict;
 
@@ -83,9 +83,10 @@ void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
 
-t_dict			*ft_dictnew(char *key, char *value);
+t_dict			*ft_dictnew(char *key, void *value);
 void			ft_dictadd(t_dict **dict, t_dict *new);
-char			*ft_dictget(t_dict *dict, char *key);
+void			*ft_dictget(t_dict *dict, char *key);
 void			ft_dictclear(t_dict *dict);
+int				ft_dictsize(t_dict *dict);
 
 #endif
