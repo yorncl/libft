@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void			ft_dictclear(t_dict *dict)
+void			ft_dictclear(t_dict *dict, void (*del)(void *))
 {
 	t_dict	*tofree;
 
@@ -20,7 +20,8 @@ void			ft_dictclear(t_dict *dict)
 	{
 		tofree = dict;
 		dict = dict->next;
-		ft_bzero(tofree, sizeof(t_dict));
+		if (del)
+			del(tofree);
 		free(tofree);
 	}
 }

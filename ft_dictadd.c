@@ -25,6 +25,10 @@ void	ft_dictadd(t_dict **dict, t_dict *new)
 	}
 	p = *dict;
 	while (p->next)
+	{
+		if (ft_strcmp(p->key, new->key))
+			return ;
 		p = p->next;
+	}
 	p->next = new;
 }
