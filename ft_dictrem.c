@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dictdelone.c                                    :+:      :+:    :+:   */
+/*   dictrem.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,14 +12,16 @@
 
 #include "libft.h"
 
-
-void 	ft_dictdelone(t_dict *dict, void (*del)(void *))
+void 	ft_dictrem(t_dict **dict, char *key, void (*del)(void *))
 {
-	if (del)
+	t_dict *torem;
+
+	if ((torem = ft_dictget(*dict, key)))
 	{
-		del(dict->key);
-		del(dict->value);
+		if (torem == *dict)
+		{
+			*dict = (*dict)->next;
+		}
+		ft_dictdelone(torem, del);
 	}
-	ft_bzero(dict, sizeof(t_dict));
-	free(dict);
 }
