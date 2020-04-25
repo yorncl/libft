@@ -24,10 +24,10 @@ static	void	check_elems(t_dict *curr, char *key, void (*del)(void *))
 			curr->next = next->next;
 			if (del)
 			{
-				del(curr->key);
-				del(curr->value);
+				del(next->key);
+				del(next->value);
 			}
-			free(curr);
+			free(next);
 			return ;
 		}
 		curr = curr->next;
@@ -49,6 +49,7 @@ void 	ft_dictdelone(t_dict **dict, char *key, void (*del)(void *))
 			del(curr->value);
 		}
 		free(curr);
+		return ;
 	}
 	check_elems(curr, key, del);
 }
