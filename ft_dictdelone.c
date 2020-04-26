@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 
 void 	ft_dictdelone(t_dict *dict, void (*del)(void *))

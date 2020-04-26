@@ -11,17 +11,34 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void 	ft_dictrem(t_dict **dict, char *key, void (*del)(void *))
 {
+
+	t_dict *curr;
 	t_dict *torem;
 
-	if ((torem = ft_dictget(*dict, key)))
+	if (!dict || !*dict)
+		return ;
+	if (ft_strcmp((*dict)->key, key) == 0)
 	{
-		if (torem == *dict)
+		torem = *dict;
+		*dict = (*dict)->next;
+	}
+	else
+	{
+		curr = *dict;
+		while (curr->next)
 		{
-			*dict = (*dict)->next;
+			if (ft_strcmp(curr->next->key, key) == 0)
+			{
+				torem = curr->next;
+				curr->next = torem->next;
+				ft_dictdelone(torem, del);
+				return ;
+			}
+			curr = curr->next;
 		}
-		ft_dictdelone(torem, del);
 	}
 }
