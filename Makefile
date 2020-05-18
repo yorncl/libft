@@ -44,6 +44,7 @@ SRCS =	ft_isspace.c \
 		ft_dictnew.c \
 		ft_dictadd.c \
 		ft_dictget.c \
+		ft_dictgetindex.c \
 		ft_dictclear.c \
 		ft_dictdelone.c \
 		ft_dictrem.c \

@@ -86,6 +86,7 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 t_dict			*ft_dictnew(char *key, void *value);
 void			ft_dictadd(t_dict **dict, t_dict *new);
 void			*ft_dictget(t_dict *dict, char *key);
+t_dict			*ft_dictgetindex(t_dict *dict, int i);
 void			ft_dictclear(t_dict *dict, void (*del)(void *));
 int				ft_dictsize(t_dict *dict);
 void			ft_dictdelone(t_dict *dict, void (*del)(void *));

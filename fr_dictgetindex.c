@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dictsize.c                                      :+:      :+:    :+:   */
+/*   ft_dictgetindex.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/12 15:58:23 by mclaudel          #+#    #+#             */
-/*   Updated: 2020/03/12 16:07:05 by mclaudel         ###   ########.fr       */
+/*   Created: 2020/03/12 15:50:16 by mclaudel          #+#    #+#             */
+/*   Updated: 2020/03/12 16:06:54 by mclaudel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				ft_dictsize(t_dict *dict)
+t_dict			*ft_dictgetindex(t_dict *dict, int i)
 {
-	int size;
-
-	size = 0;
-	while (dict)
-	{
+	while (dict && i-- > 0)
 		dict = dict->next;
-		size++;
-	}
-	return (size);
+	return (dict);
 }
