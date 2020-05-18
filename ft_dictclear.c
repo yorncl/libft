@@ -21,7 +21,10 @@ void			ft_dictclear(t_dict *dict, void (*del)(void *))
 		tofree = dict;
 		dict = dict->next;
 		if (del)
-			del(tofree);
+        {
+			del(tofree->key);
+			del(tofree->value);
+        }
 		free(tofree);
 	}
 }

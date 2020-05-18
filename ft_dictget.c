@@ -16,7 +16,7 @@ void			*ft_dictget(t_dict *dict, char *key)
 {
 	size_t len;
 
-	len = ft_strlen(key);
+	len = ft_strlen(key) + 1;
 	while (dict)
 	{
 		if (ft_strncmp(key, dict->key, len) == 0)
