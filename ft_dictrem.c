@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dictrem.c                                       :+:      :+:    :+:   */
+/*   ft_dictrem.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mclaudel <mclaudel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/12 15:50:16 by mclaudel          #+#    #+#             */
-/*   Updated: 2020/03/12 16:06:54 by mclaudel         ###   ########.fr       */
+/*   Created: 2020/05/26 14:35:24 by user42            #+#    #+#             */
+/*   Updated: 2020/05/26 14:36:07 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-void 	ft_dictrem(t_dict **dict, char *key, void (*del)(void *))
+void	ft_dictrem(t_dict **dict, char *key, void (*del)(void *))
 {
-
 	t_dict *curr;
 	t_dict *torem;
 
