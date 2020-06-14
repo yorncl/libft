@@ -70,7 +70,7 @@ $(NAME) :  ${OBJS}
 	ar rcs ${LIB} ${OBJS}
 
 bonus : ${OBJS_B} ${OBJS}
-	ar rcs ${LIB} ${OBJS} ${OBJS_B}
+	@make all OBJS="${OBJS} ${OBJS_B}"
 
 re : fclean all
 
