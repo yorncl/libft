@@ -82,4 +82,4 @@ fclean : clean
 test : all
 	${CC} ${CFLAGS} -fsanitize=address -g3 -I . ${SRCS_TEST} ${NAME} -o ${BIN_TEST}
 	
-.PHONY: ${NAME} all re clean fclean test
+.PHONY: all re clean fclean test
