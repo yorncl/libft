@@ -50,6 +50,7 @@ SRCS =	ft_isspace.c \
 	ft_dictrem.c \
 	ft_dictsize.c \
 	ft_lstadd_back.c \
+	ft_lstaddnew_back.c \
 	ft_lstadd_front.c \
 	ft_lstclear.c \
 	ft_lstdelone.c \
