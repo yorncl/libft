@@ -58,7 +58,8 @@ SRCS =	ft_isspace.c \
 	ft_lstlast.c \
 	ft_lstmap.c \
 	ft_lstnew.c \
-	ft_lstsize.c
+	ft_lstsize.c \
+	ft_getopt.c 
 
 OBJS = ${SRCS:.c=.o}
 
