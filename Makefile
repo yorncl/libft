@@ -1,5 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -I.
+INC = ./ft_printf
 
 SRCS =	ft_isspace.c \
 	ft_min.c \
@@ -59,7 +60,15 @@ SRCS =	ft_isspace.c \
 	ft_lstmap.c \
 	ft_lstnew.c \
 	ft_lstsize.c \
-	ft_getopt.c 
+	ft_getopt.c \
+	ft_printf/ft_printers2.c \
+	ft_printf/ft_printf.c \
+	ft_printf/toputinlib1.c \
+	ft_printf/toputinlib2.c \
+	ft_printf/ft_printers1.c \
+	ft_printf/ft_handleflag.c \
+	ft_printf/ft_printers_utils.c
+
 
 OBJS = ${SRCS:.c=.o}
 
@@ -83,5 +92,5 @@ fclean : clean
 
 test : all
 	${CC} ${CFLAGS} -fsanitize=address -g3 -I . ${SRCS_TEST} ${NAME} -o ${BIN_TEST}
-	
+
 .PHONY: all re clean fclean test

@@ -94,6 +94,9 @@ int	ft_dictsize(t_dict *dict);
 void	ft_dictdelone(t_dict *dict, void (*del)(void *));
 void	ft_dictrem(t_dict **dict, char *key, void (*del)(void *));
 
+// ft_printf
+int		ft_printf(const char *s, ...);
+
 // ft_getopt_long exposes certain variabes for other program to use
 typedef struct s_options
 {
