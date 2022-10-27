@@ -60,6 +60,7 @@ SRCS =	ft_isspace.c \
 	ft_lstmap.c \
 	ft_lstnew.c \
 	ft_lstsize.c \
+	ft_lstsort.c \
 	ft_getopt.c \
 	ft_printf/ft_printers2.c \
 	ft_printf/ft_printf.c \
@@ -72,8 +73,6 @@ SRCS =	ft_isspace.c \
 
 OBJS = ${SRCS:.c=.o}
 
-SRCS_TEST = tests/libft_test.c
-BIN_TEST = tests/run_test
 
 NAME = libft.a
 
@@ -86,11 +85,12 @@ re : fclean all
 
 clean :
 	rm -f ${OBJS}
+	${MAKE} clean -C ./testsuite
 
 fclean : clean
 	rm -f ${NAME} ${BIN_TEST}
 
 test : all
-	${CC} ${CFLAGS} -fsanitize=address -g3 -I . ${SRCS_TEST} ${NAME} -o ${BIN_TEST}
+	${MAKE} -C ./testsuite
 
 .PHONY: all re clean fclean test

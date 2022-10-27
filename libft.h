@@ -84,6 +84,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
+void	ft_lstsort(t_list **lst, int (*f)(void*, void*));
 
 t_dict	*ft_dictnew(char *key, void *value);
 void	ft_dictadd(t_dict **dict, t_dict *n);
